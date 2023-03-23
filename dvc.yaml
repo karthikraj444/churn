@@ -25,10 +25,9 @@ train_and_evaluate:
           - src/train_and_evaluate.py
 
        Params:
-          - estimators.LinearRegression.Params.fit_intercept
-          - estimators.LinearRegression.Params.copy_X
-          - estimators.LinearRegression.Params.n_jobs
-          - estimators.LinearRegression.Params.positive
+           - estimators.ElasticNet.Params.alpha
+           - estimators.ElasticNet.Params.l1_ratio
+
 
 
        metrics:

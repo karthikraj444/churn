@@ -14,3 +14,5 @@ matplotlib
 boto 3
 dvc
 jupyterlab
+Scikit-Learn
+argparse
