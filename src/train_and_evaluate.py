@@ -5,7 +5,7 @@ from pkgutil import get_data
 from get_data import get_data,read_params
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error,mean_absolute_error,r2_score
-from sklearn.linear_model import LinearRegression
+from sklearn.linear_model import ElasticNet
 import joblib
 import json
 import numpy as np
@@ -65,11 +65,8 @@ def train_and_evaluate(config_path):
 
     with open(params_file,"w")as f:
         params={
-            "fit_intercept":fit_intercept,
-            "copy_X":copy_X,
-            "n_jobs":n_jobs,
-            "positive":positive
-            
+            "alpha":alpha,
+            "l1_ratio":l1_ratio
         }
         json.dump(params,f,indent=4)
 
@@ -80,6 +77,7 @@ def train_and_evaluate(config_path):
 
 
 if __name__=="__main__":
+    
     args = argparse.ArgumentParser()
     args.add_argument("--config",default="params.yaml")
     parsed_args=args.parse_args()

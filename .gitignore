@@ -87,5 +87,8 @@ target/
 
 # Mypy cache
 .mypy_cache/
-
-source_code/
+Source_Code/
+get_data.py/
+load_data.py/
+split_data.py/
+train_and_evaluate.py/
